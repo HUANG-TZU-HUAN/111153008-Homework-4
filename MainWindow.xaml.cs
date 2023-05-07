@@ -157,5 +157,22 @@ namespace _111153008_Homework_4
             intswitch = -1;
             first = 0;
         }
+
+        private void ___Click(object sender, RoutedEventArgs e)
+        {
+            double a;
+            if(double.TryParse(txtNumber.Text,out a) == true)
+            {
+                txtNumber.Text = string.Format("{0:0.#####}", a / 100);
+            }
+        }
+
+        private void btnbs_Click(object sender, RoutedEventArgs e)
+        {
+            if(txtNumber.Text.Length>0) 
+            {
+            txtNumber.Text=txtNumber.Text.Remove(txtNumber.Text.Length-1,1);
+            }
+        }
     }
 }

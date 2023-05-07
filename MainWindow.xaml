@@ -25,8 +25,8 @@
         <Button x:Name="btnAdd" Content="+" HorizontalAlignment="Left" Margin="493,241,0,0" VerticalAlignment="Top" Width="42" Click="btnAdd_Click"/>
         <TextBox x:Name="txtNumber" HorizontalAlignment="Left" Height="25" Margin="225,90,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="310" TextAlignment="Right"/>
         <Button x:Name="btnClear" Content="AC" HorizontalAlignment="Left" Height="19" Margin="225,141,0,0" VerticalAlignment="Top" Width="50" Click="btnClear_Click_1"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="233,180,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="233,241,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="__" Content="%" HorizontalAlignment="Left" Margin="225,180,0,0" VerticalAlignment="Top" Width="48" Click="___Click"/>
+        <Button x:Name="btnbs" Content="迴車鍵" HorizontalAlignment="Left" Margin="225,241,0,0" VerticalAlignment="Top" Width="48" Click="btnbs_Click"/>
 
     </Grid>
 </Window>
