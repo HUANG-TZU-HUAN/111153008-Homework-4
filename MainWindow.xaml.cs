@@ -25,6 +25,8 @@ namespace _111153008_Homework_4
             InitializeComponent();
         }
 
+        int intswitch;
+        double first;
         void zero(string _one)
         {
             if(txtNumber.Text=="0")
@@ -84,43 +86,76 @@ namespace _111153008_Homework_4
             zero("0");
         }
 
-        void AMPD(string amp) 
+        void AMPD(int amp) 
         { 
-            double first;
             first = Convert.ToDouble(txtNumber.Text);
             txtNumber.Text = "0";
+            intswitch = amp;
         }
 
 
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            AMPD(0);
         }
 
         private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
-
+            AMPD(1);
         }
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
-
+            AMPD(2);
         }
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
-
+            AMPD(3);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            if (txtNumber.Text.IndexOf(".") == -1)
+            {
+                txtNumber.Text += ".";
+            }
         }
 
         private void btnEqual_Click(object sender, RoutedEventArgs e)
         {
+            double second,ans=0;
+            if(double.TryParse(txtNumber.Text,out second)==true)
+            {
+                switch (intswitch)
+                {
+                    case 0:
+                        ans = first + second;
+                        break;
+                    case 1:
+                        ans = first - second;
+                        break;
+                    case 2:
+                        ans= first * second;
+                        break;
+                    case 3:
+                        ans= first / second;
+                        break;
+                }
+                txtNumber.Text=string.Format("{0:0.#####}",ans);
+                intswitch= -1;
+                ans= 0;
+                first= 0;
+                second= 0;
+            }
+        }
 
+        private void btnClear_Click_1(object sender, RoutedEventArgs e)
+        {
+            txtNumber.Text = "0";
+            intswitch = -1;
+            first = 0;
         }
     }
 }
